@@ -9,8 +9,8 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *f_list;
-	listint_t *s_list;
+	listint_t *f_list = list;
+	listint_t *s_list = list;
 
 	if (list == NULL || list->next == NULL)
 		return (0);
