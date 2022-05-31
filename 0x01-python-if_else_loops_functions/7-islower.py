@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def islower(c):
     for i in range(26):
         if (c == chr(ord('a') + i)):
