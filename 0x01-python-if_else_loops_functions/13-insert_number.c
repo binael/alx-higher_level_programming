@@ -29,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 				break;
 		}
 
-		if (my_node != NULL) && (my_node->n < number)
+		if ((my_node != NULL) && (my_node->n < number))
 		{
 			node->next = my_node->next;
 			my_node->next = node;
