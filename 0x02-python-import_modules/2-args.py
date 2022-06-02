@@ -10,12 +10,13 @@ def check_args(argv):
     elif length == 2:
         print("{:d} argument:".format(length - 1))
     else:
-        print("{:d} argument.".format(length - 1))
+        print("{:d} arguments.".format(length - 1))
         return
 
     while i < length:
         print("{:d}: {:s}".format(i, argv[i]))
         i += 1
+
 
 if __name__ == "__main__":
 
