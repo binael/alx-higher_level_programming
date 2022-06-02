@@ -13,7 +13,7 @@ def calculate(argv):
     if argv[2] not in "-+/*":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-    
+
     a = int(argv[1])
     b = int(argv[3])
 
