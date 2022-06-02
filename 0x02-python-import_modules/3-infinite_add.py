@@ -11,7 +11,8 @@ def inf_add(argv):
 
     print(total)
 
+
 if __name__ == "__main__":
-    
+
     import sys
     inf_add(sys.argv)
