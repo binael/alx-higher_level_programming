@@ -4,11 +4,10 @@ import hidden_4
 
 
 def unhide():
-    files = dir(hidden_4)
 
-    for fil in files:
-        if fil[:2] != "__":
-            print("{:s}".format(fil))
+    for files in dir(hidden_4):
+        if files[:2] != "__":
+            print("{:s}".format(files))
 
 
 if __name__ == "__main__":
