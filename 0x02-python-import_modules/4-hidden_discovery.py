@@ -2,13 +2,14 @@
 
 import hidden_4
 
+
 def unhide():
     files = dir(hidden_4)
 
-    for file in files:
-        if file[:2] == "__":
+    for fil in files:
+        if fil[:2] == "__":
             continue
-        print("{:s}".format(file))
+        print("{:s}".format(fil))
 
 
 if __name__ == "__main__":
