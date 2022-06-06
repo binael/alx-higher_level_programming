@@ -13,3 +13,5 @@ def new_in_list(my_list, idx, element):
             new_list.append(element)
             continue
         new_list.append(i)
+
+    return new_list
