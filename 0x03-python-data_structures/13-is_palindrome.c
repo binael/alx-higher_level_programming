@@ -9,7 +9,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *my_node;
-	int *my_list, c = 0, i = 0, len = 32;
+	int *my_list, c = 0, i = 0, len = 1024;
 
 	my_list = malloc(sizeof(int) * len);
 
