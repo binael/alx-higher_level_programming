@@ -10,7 +10,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *my_node;
-	int my_list[1024], c = 0, i = 0;
+	int my_list[4096], c = 0, i = 0;
 
 	if ((!*head) || (!head))
 		return (1);
