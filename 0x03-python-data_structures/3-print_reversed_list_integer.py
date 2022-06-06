@@ -3,7 +3,7 @@
 def print_reversed_list_integer(my_list=[]):
     """Reverse printing a  list of integers"""
 
-    if isempty(my_list):
+    if not my_list:
         return
 
     for i in reversed(my_list):
