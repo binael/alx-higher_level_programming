@@ -12,13 +12,11 @@
 
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize i, size;
-	PyListObject *object;
+	int i;
 
-	object = (PyListObject *)p;
-	size = PyList_Size(p);
+	PyListObject *object = (PyListObject *)p;
 
-	printf("[*] Size of the Python List = %d\n", size);
+	printf("[*] Size of the Python List = %d\n", Py_SIZE(p));
 	printf("[*] Allocated = %d\n", object->allocated);
 
 	for (i = 0; i < size; i++)
