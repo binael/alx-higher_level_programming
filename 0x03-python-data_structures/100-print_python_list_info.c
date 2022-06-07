@@ -1,7 +1,4 @@
-#include <Python.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
+#include "Python.h"
 
 /**
  * print_python_list_info - prints infor about python objects
