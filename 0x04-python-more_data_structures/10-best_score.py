@@ -4,12 +4,11 @@ def best_score(a_dictionary):
     """Returns the key with the maximum value"""
 
     if a_dictionary:
-        best = list(a_dictionary.keys())[1]
+        best = max(list(a_dictionary.values()))
 
         for key in a_dictionary.keys():
-            if a_dictionary[key] > a_dictionary[best]:
-                best = key
+            if a_dictionary[key] == best:
+                return key
+
     else:
         return None
-
-    return best
