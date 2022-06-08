@@ -3,7 +3,13 @@
 def roman_to_int(roman_string):
     """Converts roman numerals to integers"""
 
-    roman_dic = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    roman_dic = {'I': 1,
+                 'V': 5,
+                 'X': 10,
+                 'L': 50,
+                 'C': 100,
+                 'D': 500,
+                 'M': 1000}
     symbol = ['I', 'V', 'X', 'L', 'C', 'D', 'M']
     total = 0
 
