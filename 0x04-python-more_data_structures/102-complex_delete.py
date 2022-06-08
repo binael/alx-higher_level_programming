@@ -3,13 +3,13 @@
 def complex_delete(a_dictionary, value):
     """ function that deletes keys with a specific value in a dictionary"""
 
-    new_dict = {}
+    my_list = []
 
     for k, v in a_dictionary.items():
         if v == value:
-            continue
-        new_dict.setdefault(k, v)
+            my_list.append(k)
 
-    a_dictionary = new_dict
+    for element in my_list:
+        del a_dictionary[element]
 
     return a_dictionary
