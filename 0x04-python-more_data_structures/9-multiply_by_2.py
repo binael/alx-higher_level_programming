@@ -2,7 +2,7 @@
 
 def multiply_by_2(a_dictionary):
     """Multiply all values by 2"""
-    
+
     new_dict = {}
 
     for key in a_dictionary.keys():
