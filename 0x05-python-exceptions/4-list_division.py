@@ -3,11 +3,11 @@
 def list_division(my_list_1, my_list_2, list_length):
     my_list = []
 
-    length = len(my_list_1)
-    if len(my_list_2) > len(my_list_1):
-        length = len(my_list_2)
+    if list_length <= 0:
+        print("out of range")
+        return my_list
 
-    for i in range(length):
+    for i in range(list_length):
         element = 0
         try:
             a = my_list_1[i] / my_list_2[i]
@@ -20,3 +20,5 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
         finally:
             my_list.append(element)
+
+    return my_list
