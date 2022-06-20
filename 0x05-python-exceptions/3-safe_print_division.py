@@ -3,8 +3,9 @@
 def safe_print_division(a, b):
     try:
         div = a / b
-    except:
+        print("inside result: {:.1f}".format(div))
+    except Exception:
         div = None
-    finally:
         print("inside result: {}".format(div))
+    finally:
         return(div)
