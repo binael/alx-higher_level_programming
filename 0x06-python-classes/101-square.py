@@ -49,8 +49,9 @@ class Square:
             return
 
         [print("") for i in range(self.__position[1])]
-        for i in range(self.__size):
+        for i in range(self.__size - 1):
             print(f"{' ' * self.__position[0]}{'#' * self.__size}")
+        print(f"{' ' * self.__position[0]}{'#' * self.__size}", end="")
 
     def __str__(self):
         """Returns string version of the object call"""
