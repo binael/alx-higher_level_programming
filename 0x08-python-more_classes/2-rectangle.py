@@ -51,4 +51,4 @@ class Rectangle:
         if not self.area():
             return 0
         else:
-            return (2 * (self.__width * self.__height))
+            return (2 * (self.__width + self.__height))
