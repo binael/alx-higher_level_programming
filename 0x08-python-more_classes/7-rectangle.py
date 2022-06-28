@@ -62,8 +62,8 @@ class Rectangle:
         if not self.area():
             return ""
         for i in range(self.__height - 1):
-            print(f"{self.print_symbol * self.__width}")
-        print(f"{self.print_symbol * self.__width}", end="")
+            print(f"{str(self.print_symbol) * self.__width}")
+        print(f"{str(self.print_symbol) * self.__width}", end="")
         return ""
 
     def __repr__(self):
