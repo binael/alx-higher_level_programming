@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """placing N non-attacking queens on an N×N chessboard"""
 
+
 def nqueen(N):
     """Function that solves the nqueen problem"""
     pass
+
 
 if __name__ == '__main__':
     import sys
