@@ -10,7 +10,7 @@ def nqueen(N):
 if __name__ == '__main__':
     import sys
 
-    if len(sys.argv) is not 2:
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
 
@@ -20,7 +20,7 @@ if __name__ == '__main__':
         print("N must be a number")
         sys.exit(1)
 
-    if number is not float(sys.argv[1]):
+    if number != float(sys.argv[1]):
         print("N must be a number")
         sys.exit(1)
 
