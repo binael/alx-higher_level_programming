@@ -1,0 +1,27 @@
+A test for the say_my_name function
+
+Import the module
+>>> import sys
+>>> sys.path.insert(1, '../')
+>>> lib = __import__("3-say_my_name")
+>>> func = lib.say_my_name
+
+
+#Normal Test
+>>> func("El", "Bina")
+My name is El Bina
+
+#Type Errors
+>>> func("Ada", 0)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+>>> func(23, "Emeka")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> func(None, 8)
+Traceback (most recent call last):
+...
+TypeError: first name must be a string

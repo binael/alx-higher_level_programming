@@ -1,0 +1,41 @@
+A test to for the text_indenation function
+
+Import the module
+>>> import sys
+>>> sys.path.insert(1, '../')
+>>> lib = __import__("5-text_indentation")
+>>> func = lib.text_indentation
+
+#Normal addition test
+>>> func("Playing PS5?")
+Playing PS5?
+<BLANKLINE>
+
+>>> func("Dr Strange Movie")
+Dr Strange Movie
+
+>>> func("Prof. Charles? X")
+Prof.
+<BLANKLINE>
+Charles?
+<BLANKLINE>
+X
+
+#Type Errors
+
+>>> func(None)
+Traceback (most recent call last):
+...
+TypeError: text must be string
+>>> func([])
+Traceback (most recent call last):
+...
+TypeError: text must be string
+>>> func(-5)
+Traceback (most recent call last):
+...
+TypeError: text must be string
+>>> func(2.2)
+Traceback (most recent call last):
+...
+TypeError: text must be string

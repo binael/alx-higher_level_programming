@@ -1,0 +1,39 @@
+A test to for the print_square function
+
+Import the module
+>>> import sys
+>>> sys.path.insert(1, '../')
+>>> lib = __import__("4-print_square")
+>>> func = lib.print_square
+
+#Normal addition test
+'''
+>>> func(2)
+###
+###
+
+>>> func(0)
+
+
+#Type Errors
+
+>>> func(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> func(5.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> func([])
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+
+
+#value Errors
+>>> func(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
