@@ -26,16 +26,16 @@ X
 >>> func(None)
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
 >>> func([])
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
 >>> func(-5)
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
 >>> func(2.2)
 Traceback (most recent call last):
 ...
-TypeError: text must be string
+TypeError: text must be a string
