@@ -7,7 +7,6 @@ Import the module
 >>> func = lib.print_square
 
 #Normal addition test
-'''
 >>> func(2)
 ##
 ##
@@ -29,8 +28,6 @@ TypeError: size must be an integer
 Traceback (most recent call last):
 ...
 TypeError: size must be an integer
-
-
 
 #value Errors
 >>> func(-1)
