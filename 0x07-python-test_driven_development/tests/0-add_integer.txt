@@ -20,16 +20,19 @@ Import Python module + collections
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
-# Complex numbers
+
+Complex numbers
 >>> add_integer(1+2j)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
 # A list
 >>> add_integer([])
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
 # A string
 >>> add_integer("23")
 Traceback (most recent call last):
@@ -42,16 +45,19 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
 # int and complex number
 >>> add_integer(1, 1+2j)
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
 #int and list
 >>> add_integer(1, [])
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
 #int and string
 >>> add_integer(1, "")
 Traceback (most recent call last):
