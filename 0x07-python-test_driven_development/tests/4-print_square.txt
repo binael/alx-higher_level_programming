@@ -9,8 +9,8 @@ Import the module
 #Normal addition test
 '''
 >>> func(2)
-###
-###
+##
+##
 
 >>> func(0)
 
