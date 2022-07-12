@@ -11,8 +11,8 @@ Import Python module + collections
 98
 >>> add_integer(-10)
 88
->>> add_integer(0.5)
-98
+>>> add_integer(3)
+101
 
 # Type Errors:
 #None type
