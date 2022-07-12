@@ -34,3 +34,25 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 ...
 TypeError: Each row of the matrix must have the same size
+
+#division by zero
+>>> func(x, 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+#division by float infinity
+>>> func(x, float('inf'))
+[[0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0], [-0.0, 0.0]]
+
+#missing one argument
+>>> func(x)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+#missing two arguments
+>>> func()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
