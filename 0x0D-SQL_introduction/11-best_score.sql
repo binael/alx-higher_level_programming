@@ -3,4 +3,4 @@
 SELECT score, name
 	FROM hbtn_0c_0
 		WHERE score >= 10
-			ORDER BY score DESC;
+			ORDER BY score DESC, name;
