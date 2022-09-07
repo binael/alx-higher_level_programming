@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-let c = -1;
+let num = -1;
 exports.logMe = function (item) {
   function printLog (item) {
-    c++;
-    console.log(`${c}: ${item}`);
+    num++;
+    console.log(`${num}: ${item}`);
   }
   return printLog(item);
 };

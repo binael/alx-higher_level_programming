@@ -9,16 +9,21 @@ module.exports = class Rectangle {
   }
 
   print () {
-    let a = 'X'.repeat(this.width) + '\n';
-    a = a.repeat(this.height);
-    console.log(a.slice(0, -1));
+    let a = '';
+    for (let i = 0; i < this.height; i++) {
+      a = '';
+      for (let j = 0; j < this.width; j++) {
+        a += 'X';
+      }
+      console.log(a);
+    }
   }
 
   rotate () {
-    [this.height, this.width] = [this.width, this.height];
+    [this.width, this.height] = [this.height, this.width];
   }
 
   double () {
-    [this.height, this.width] = [this.height * 2, this.width * 2];
+    [this.width, this.height] = [this.width * 2, this.height * 2];
   }
 };
