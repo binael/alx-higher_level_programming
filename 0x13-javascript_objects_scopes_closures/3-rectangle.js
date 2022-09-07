@@ -9,8 +9,13 @@ module.exports = class Rectangle {
   }
 
   print () {
-    let a = 'X'.repeat(this.width) + '\n';
-    a = a.repeat(this.height);
-    console.log(a.slice(0, -1));
+    let a = '';
+    for (let i = 0; i < this.height; i++) {
+      a = '';
+      for (let j = 0; j < this.width; j++) {
+        a += 'X';
+      }
+      console.log(a);
+    }
   }
 };
