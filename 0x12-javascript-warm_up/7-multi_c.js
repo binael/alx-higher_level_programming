@@ -5,8 +5,7 @@ let i = 0;
 
 if (!userArgs) {
   console.log('Missing number of occurrences');
-}
-else {
+} else {
   for (i = 0; i < userArgs; i++) {
     console.log('C is fun');
   }
