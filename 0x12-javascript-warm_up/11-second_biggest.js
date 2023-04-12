@@ -5,14 +5,14 @@ if (process.argv.length < 4) {
 } else {
   const arr = process.argv.slice(2);
   let secondElement = Number.MIN_VALUE;
-  let maxValue = Number.MAX_VALUE;
+  let maxValue = Number.MIN_VALUE;
 
   arr.forEach(function (element) {
     element = parseInt(element);
     if (element > maxValue) {
       secondElement = maxValue;
       maxValue = element;
-    } else if (secondElement < element && maxValue > element) {
+    } else if (element > secondElement) {
       secondElement = element;
     }
   });
