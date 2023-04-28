@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     try:
         j_file = response.json()
-        if j_file is None:
+        if j_file is {}:
             print("No result")
         else:
             print("[{}] {}".format(j_file.get("id"), j_file.get("name")))
