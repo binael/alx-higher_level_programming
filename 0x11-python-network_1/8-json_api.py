@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     url = "http://0.0.0.0:5000/search_user"
 
-    if sys.argv[1]:
+    if len(sys.argv) > 1:
         data = {"q": sys.argv[1]}
     else:
         data = {"q": ""}
@@ -19,9 +19,9 @@ if __name__ == "__main__":
 
     try:
         j_file = response.json()
-        if j_file is {}:
+        if j_file is None:
             print("No result")
         else:
             print("[{}] {}".format(j_file.get("id"), j_file.get("name")))
-    except ValueError:
+    except Exception:
         print("Not a valid json file")
