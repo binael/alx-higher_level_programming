@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """A script that utilizes python 'requests' module to
 get a github ID
 INPUTS: GH username, GH token, GH api (url)"""
