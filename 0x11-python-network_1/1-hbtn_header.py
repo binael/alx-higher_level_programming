@@ -8,7 +8,6 @@ if __name__ == "__main__":
     import sys
     import urllib.request
 
-
     my_url = urllib.request.Request(sys.argv[1])
     with urllib.request.urlopen(my_url) as response:
         response = response.headers
