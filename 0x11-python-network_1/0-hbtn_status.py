@@ -4,10 +4,11 @@
 while formatting the output
 """
 
+
 if __name__ == "__main__":
     import urllib.request
-    my_url = "https://alx-intranet.hbtn.io/status"
 
+    my_url = "https://alx-intranet.hbtn.io/status"
     with urllib.request.urlopen(my_url) as response:
         response = response.read()
         print("Body response:$")
