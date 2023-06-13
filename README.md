@@ -4,3 +4,4 @@
 
 - _Python Programming_
 - _Combining C Programming and Python Programming_
+- _JavaScript_
