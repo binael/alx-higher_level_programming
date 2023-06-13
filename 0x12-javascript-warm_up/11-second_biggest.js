@@ -8,11 +8,11 @@ if (len < 4) {
   let secondMax = Number(process.argv[3]);
 
   for (let i = 3; i < len; i++) {
-    if (maxNum < process.argv[i]) {
+    if (maxNum < Number(process.argv[i])) {
       secondMax = maxNum;
-      maxNum = process.argv[i];
-    } else if (secondMax < process.argv[i]) {
-      secondMax = process.argv[i];
+      maxNum = Number(process.argv[i]);
+    } else if (secondMax < Number(process.argv[i])) {
+      secondMax = Number(process.argv[i]);
     }
   }
   console.log(secondMax);
