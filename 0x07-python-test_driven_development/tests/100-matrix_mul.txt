@@ -1,0 +1,112 @@
+# Tests for the matrix multiplication funtion
+
+>>> import sys
+>>> sys.path.insert(1, '../')
+>>> mat = __import__("100-matrix_mul")
+>>> multiply = mat.matrix_mul
+
+# The matrices to be used for the test cases
+
+>>> mat0 = [[2.5, 3.1], [2.2, 2.7]]
+>>> mat1 = [[1, 2], [3, 4]]
+>>> mat2 = [[1, 3, 2], [2, 1, 3]]
+>>> mat3 = []
+>>> mat4 = [[]]
+>>> mat5 = [[1, 2, 3], [2, 2]]
+>>> mat6 = [[1, 2, '66'], [2+8j, 2, {}]]
+>>> mat7 = ["stringify", [2, 2, 4]]
+>>> mat8 = 'Odogwu'
+
+# Normal tests
+>>> multiply(mat0, mat1)
+[[12, 17], [10, 15]]
+>>> multiply(mat1, mat2)
+[[5, 5, 8], [11, 13, 18]]
+>>> multiply(mat0, mat2)
+[[9, 11, 14], [8, 9, 13]]
+
+TESTS FOR TYPE ERRORS
+
+# Tests for list of lists
+>>> multiply(mat7, mat2)
+Traceback (most recent call last):
+	...
+TypeError: m_a must be a list of lists
+>>> multiply(mat2, mat7)
+Traceback (most recent call last):
+	...
+TypeError: m_b must be a list of lists
+
+# Test for list
+>>> multiply(mat0, mat8)
+Traceback (most recent call last):
+	...
+TypeError: m_b must be a list
+>>> multiply(mat8, mat1)
+Traceback (most recent call last):
+	...
+TypeError: m_a must be a list
+
+# Test for integer or float elements of the lists
+>>> multiply(mat6, mat2)
+Traceback (most recent call last):
+	...
+TypeError: m_a should contain only integers or floats
+>>> multiply(mat2, mat6)
+Traceback (most recent call last):
+	...
+TypeError: m_b should contain only integers or floats
+
+# Test for equality of row sizes
+>>> multiply(mat5, mat2)
+Traceback (most recent call last):
+	...
+TypeError: each row of m_a must be of the same size
+>>> multiply(mat2, mat5)
+Traceback (most recent call last):
+	...
+TypeError: each row of m_b must be of the same size
+
+# Test for only one argument
+>>> multiply(mat2)
+Traceback (most recent call last):
+	...
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+# Test for no argument
+>>> multiply()
+Traceback (most recent call last):
+	...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+# Test for more than two arguments
+>>> multiply(mat1, mat2, mat3)
+Traceback (most recent call last):
+	...
+TypeError: matrix_mul() takes 2 positional arguments but 3 were given
+
+
+TESTS FOR VALUE ERRORS
+
+# Tests for empty lists
+>>> multiply(mat3, mat0)
+Traceback (most recent call last):
+	...
+ValueError: m_a can't be empty
+>>> multiply(mat4, mat1)
+Traceback (most recent call last):
+	...
+ValueError: m_a can't be empty
+>>> multiply(mat1, mat3)
+Traceback (most recent call last):
+	...
+ValueError: m_b can't be empty
+>>> multiply(mat1, mat4)
+Traceback (most recent call last):
+	...
+ValueError: m_b can't be empty
+
+>>> multiply(mat2, mat1)
+Traceback (most recent call last):
+	...
+ValueError: m_a and m_b can't be multiplied
