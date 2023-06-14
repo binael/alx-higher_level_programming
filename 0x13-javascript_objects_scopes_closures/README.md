@@ -1,0 +1,11 @@
+# 0x13. JavaScript - Objects, Scopes and Closures
+
+## _Learning Objectives_
+- _Why JavaScript programming is amazing_
+- _How to create an object in JavaScript_
+- _What this means_
+- _What undefined means_
+- _Why the variable type and scope is important_
+- _What is a closure
+- _What is a prototype_
+- _How to inherit an object from another_
