@@ -16,7 +16,7 @@ if __name__ == '__main__':
                            passwd=password, db=database)
     cur = conn.cursor()
     query = "SELECT c.id, s.name, c.name FROM cities AS c\
-        LEFT JOIN states AS s ON c.state_id = s.id ORDER BY c.id"
+        LEFT JOIN states AS s ON c.state_id = s.id ORDER BY c.id ASC"
 
     cur.execute(query)
     table = cur.fetchall()
