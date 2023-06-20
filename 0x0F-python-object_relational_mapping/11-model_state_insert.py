@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user = sys.argv[1]
     pwd = sys.argv[2]
     db = sys.argv[3]
-    state_name = sys.argv[4].split(';')[0]
+    state_name = 'Louisiana'
 
     query = "mysql+mysqldb://{}:{}@localhost:3306/{}"
     engine = create_engine(query.format(user, pwd, db), pool_pre_ping=True)
@@ -21,6 +21,10 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
+
+    new_state = State(name='Louisiana')
+    session.add(new_state)
+    session.commit()
 
     state = session.query(State).filter(State.name == state_name).first()
 
