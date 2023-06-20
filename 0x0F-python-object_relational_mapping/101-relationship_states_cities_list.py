@@ -22,10 +22,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).filter(City.state_id == State.id).\
+    query = session.query(State).filter(State.id == City.state_id).\
         order_by(City.id).order_by(State.id)
 
-    for row in query:
-        print(row.id, row.name)
-        for col in row.cities:
-            print("	{} {}".format(col.id, col.name))
+    for state in query:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("	{}: {}".format(city.id, city.name))
