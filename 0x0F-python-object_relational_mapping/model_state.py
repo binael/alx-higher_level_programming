@@ -10,9 +10,9 @@ from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 import sys
 
-user = sys.argv[1]
-pwd = sys.argv[2]
-db = sys.argv[3]
+user = "root"
+pwd = "root"
+db = "hbtn_0e_6_usa"
 
 query = "mysql+mysqldb://{}:{}@localhost:3306/{}"
 engine = create_engine(query.format(user, pwd, db), pool_pre_ping=True)
