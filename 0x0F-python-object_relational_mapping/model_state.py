@@ -5,8 +5,8 @@ manage the instances of mysql database relations
 """
 
 if __name__ == '__main__':
-    from mysqlalchemy import create_engine, Column, String, Integer
-    from mysqlalchemy.ext.declarative import declarative_base
+    from sqlalchemy import create_engine, Column, String, Integer
+    from sqlalchemy.ext.declarative import declarative_base
     import sys
 
     user = sys.argv[1]
