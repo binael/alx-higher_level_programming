@@ -18,7 +18,16 @@ query = "mysql+mysqldb://{}:{}@localhost:3306/{}"
 engine = create_engine(query.format(user, pwd, db), pool_pre_ping=True)
 Base = declarative_base()
 
+
 class State(Base):
-	__tablename__ = 'states'
-	id = Column(Integer, primary_key=True, autoincrement=True)
-	name = Column(String(128), nullable=False)
+    """A class that models the object for the table relation
+    Attributes:
+        id: the table id
+        name: the name
+    """
+    __tablename__ = 'states'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(128), nullable=False)
+
+
+Base.metadata.create_all(engine)
