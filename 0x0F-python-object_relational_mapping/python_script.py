@@ -28,4 +28,4 @@ if __name__ == "__main__":
     for row in query:
         print(row.id, row.name)
         for col in row.cities:
-            print("	{} {}".format(col.id, col.name))
+            print("\t{} {}".format(col.id, col.name))
