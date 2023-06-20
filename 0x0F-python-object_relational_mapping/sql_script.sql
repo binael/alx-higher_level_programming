@@ -6,6 +6,6 @@ INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New Y
 Base.metadata.create_all(engine)
 
 session = Session(engine)
-for state in session.query(State).order_by(State.id).all(): # HERE: no SQL query, only objects!
+ # HERE: no SQL query, only objects!
     print("{}: {}".format(state.id, state.name))
 session.close()*/
