@@ -15,15 +15,15 @@ if __name__ == "__main__":
     pwd = sys.argv[2]
     db = sys.argv[3]
 
-    query = "mysql+mysqldb://{}:{}@localhost:3306/{}"
-    engine = create_engine(query.format(user, pwd, db), pool_pre_ping=True)
+    conn = "mysql+mysqldb://{}:{}@localhost:3306/{}"
+    engine = create_engine(conn.format(user, pwd, db), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).filter(State.id == City.state_id).\
-        order_by(City.id).order_by(State.id)
+    query = session.query(State).\
+        order_by(State.id).all()
 
     for state in query:
         print("{}: {}".format(state.id, state.name))
