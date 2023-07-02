@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """A program that finds the maximum number in a list
 Using divide and conquer algorithm with log(n)
 """
@@ -10,10 +11,14 @@ def find_peak(list_of_integers):
 
     if size == 0:
         return None
-    if size == 1:
-        return list_of_integers[0]
-    upper = size - 1
-    lower = 0
-    mid = size / 2
 
-    
+    max_int = list_of_integers[0]
+
+    if size == 1:
+        return max_int
+
+    for element in list_of_integers:
+        if (element > max_int):
+            max_int = element
+
+    return max_int
