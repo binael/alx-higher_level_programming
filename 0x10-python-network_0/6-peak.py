@@ -3,7 +3,12 @@
 Using divide and conquer algorithm with log(n)
 """
 
+
 def find_peak(list_of_integers):
+    """A function that finds the peak element
+    Argument:
+        list_of_integers: list
+    """
     if not (isinstance(list_of_integers, list)):
         return None
 
@@ -13,6 +18,11 @@ def find_peak(list_of_integers):
         return None
 
     max_int = list_of_integers[0]
+
+    if size == 2:
+        if max_int > list_of_integers[1]:
+            return max_int
+        return list_of_integers[1]
 
     if size == 1:
         return max_int
