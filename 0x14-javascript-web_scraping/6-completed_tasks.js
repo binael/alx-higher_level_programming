@@ -5,7 +5,7 @@ const urlPath = process.argv[2];
 
 request.get(urlPath, (error, response, body) => {
   if (error) {
-    console.log(error);
+    console.log('');
   } else {
     const data = JSON.parse(body);
     const objFile = {};
