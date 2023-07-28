@@ -19,7 +19,6 @@ request.get(urlPath, (error, response, body) => {
         objFile[id] += 1;
       }
     }
-    const newObj = JSON.stringify(objFile, null, ' ');
-    console.log(newObj);
+    console.log(objFile);
   }
 });
