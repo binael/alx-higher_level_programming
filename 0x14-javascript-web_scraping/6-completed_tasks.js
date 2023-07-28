@@ -10,15 +10,12 @@ request.get(urlPath, (error, response, body) => {
     const data = JSON.parse(body);
     const objFile = {};
 
-    for (const user of data) {
-      const id = '' + user.userId;
-      if (user.completed === true) {
-        if (!objFile[id]) {
-          objFile[id] = 0;
-        }
-        objFile[id] += 1;
+    data.forEach((user) => {
+      if (user.completed) {
+        const userId = user.userId;
+        objFile[userId] = (objFile[userId] || 0) + 1;
       }
-    }
+    });
     console.log(objFile);
   }
 });
