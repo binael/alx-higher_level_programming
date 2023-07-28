@@ -12,10 +12,10 @@ request.get(urlPath, (error, response, body) => {
 
     for (const user of data) {
       const id = '' + user.userId;
-      if (!objFile[id]) {
-        objFile[id] = 0;
-      }
       if (user.completed === true) {
+        if (!objFile[id]) {
+          objFile[id] = 0;
+        }
         objFile[id] += 1;
       }
     }
