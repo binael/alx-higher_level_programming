@@ -11,7 +11,7 @@ request.get(urlPath, (error, response, body) => {
     const objFile = {};
 
     for (const user of data) {
-      const id = user.userId;
+      const id = '' + user.userId;
       if (!objFile[id]) {
         objFile[id] = 0;
       }
@@ -19,7 +19,7 @@ request.get(urlPath, (error, response, body) => {
         objFile[id] += 1;
       }
     }
-
-    console.log(objFile);
+    const newObj = JSON.stringify(objFile);
+    console.log(newObj);
   }
 });
