@@ -19,19 +19,7 @@ request.get(urlPath, (error, response, body) => {
         objFile[id] += 1;
       }
     }
-    const entries = Object.entries(objFile);
-    let index = 0;
-    while (index < entries.length) {
-      const [key, value] = entries[index];
-
-      if (index === 0) {
-        console.log(`{ '${key}': ${value}, `);
-      } else if (index === entries.length - 1) {
-        console.log(`  '${key}': ${value} }`);
-      } else {
-        console.log(`  '${key}': ${value}, `);
-      }
-      index++;
-    }
+    const newObj = JSON.stringify(objFile, null, ' ');
+    console.log(newObj);
   }
 });
